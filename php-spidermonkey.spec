@@ -6,7 +6,7 @@
 Summary:	JavaScript engine for PHP
 Name:		php-%{modname}
 Version:	0.1.3
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/spidermonkey/
