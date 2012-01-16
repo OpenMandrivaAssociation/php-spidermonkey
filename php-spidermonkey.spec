@@ -24,7 +24,7 @@ PHP.
 %prep
 
 %setup -q -n %{modname}-%{version}
-[ "../package*.xml" != "/" ] && mv ../package*.xml .
+#[ "../package*.xml" != "/" ] && mv ../package*.xml .
 
 %build
 %serverbuild
@@ -65,6 +65,6 @@ rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
-%doc package*.xml 
+%doc package*.xml
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
