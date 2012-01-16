@@ -33,6 +33,9 @@ phpize
 %configure2_5x --with-libdir=%{_lib} \
     --with-%{modname}=shared,%{_prefix}
 
+# bork bork!
+perl -pi -e "s|^SPIDERMONKEY_SHARED_LIBADD.*|SPIDERMONKEY_SHARED_LIBADD=-ljs|g" Makefile
+
 %make
 mv modules/*.so .
 
