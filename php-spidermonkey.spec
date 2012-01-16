@@ -25,10 +25,6 @@ PHP.
 %setup -q -n %{modname}-%{version}
 [ "../package*.xml" != "/" ] && mv ../package*.xml .
 
-# bork bork!
-perl -pi -e "s|\\\$SPIDERMONKEY_INCDIR|%{_includedir}/js-1.70|g" config.m4
-perl -pi -e "s|js mozjs|js-1.70|g" config.m4
-
 %build
 %serverbuild
 
