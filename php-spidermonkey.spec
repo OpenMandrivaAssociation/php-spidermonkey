@@ -14,7 +14,9 @@ URL:		http://pecl.php.net/package/spidermonkey/
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 BuildRequires:	php-devel >= 3:5.3.0
 BuildRequires:	apache-devel >= 2.2.0
-BuildRequires:	js-devel >= 1.70
+# breaks backporting, but that's already broken...
+BuildRequires:	mozjs-devel >= 1.85
+BuildRequires:	pkgconfig
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -34,7 +36,8 @@ phpize
     --with-%{modname}=shared,%{_prefix}
 
 # bork bork!
-perl -pi -e "s|^SPIDERMONKEY_SHARED_LIBADD.*|SPIDERMONKEY_SHARED_LIBADD=-ljs|g" Makefile
+BORK=`pkg-config --libs mozjs185`
+perl -pi -e "s|^SPIDERMONKEY_SHARED_LIBADD.*|SPIDERMONKEY_SHARED_LIBADD=$BORK|g" Makefile
 
 %make
 mv modules/*.so .
