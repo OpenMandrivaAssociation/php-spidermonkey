@@ -5,11 +5,12 @@
 
 Summary:	JavaScript engine for PHP
 Name:		php-%{modname}
-Version:	0.1.4
-Release:	%mkrel 10
+Version:	0.1.5
+Release:	%mkrel 0.1
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/spidermonkey/
+# https://github.com/christopherobin/php-spidermonkey
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 BuildRequires:	php-devel >= 3:5.3.0
 BuildRequires:	apache-devel >= 2.2.0
@@ -31,9 +32,6 @@ PHP.
 phpize
 %configure2_5x --with-libdir=%{_lib} \
     --with-%{modname}=shared,%{_prefix}
-
-# bork bork!
-perl -pi -e "s|^SPIDERMONKEY_SHARED_LIBADD.*|SPIDERMONKEY_SHARED_LIBADD=-ljs|g" Makefile
 
 %make
 mv modules/*.so .
@@ -70,4 +68,3 @@ rm -rf %{buildroot}
 %doc package*.xml 
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
-
