@@ -5,7 +5,7 @@
 
 Summary:	JavaScript engine for PHP
 Name:		php-%{modname}
-Version:	0.2.0
+Version:	1.0.0
 Release:	%mkrel 1
 Group:		Development/PHP
 License:	PHP License
