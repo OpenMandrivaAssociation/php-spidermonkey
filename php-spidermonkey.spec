@@ -26,7 +26,7 @@ PHP.
 %prep
 
 %setup -q -n %{modname}-%{version}
-#[ "../package*.xml" != "/" ] && mv ../package*.xml .
+[ "../package*.xml" != "/" ] && mv ../package*.xml .
 
 %build
 %serverbuild
