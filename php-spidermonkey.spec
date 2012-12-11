@@ -74,3 +74,75 @@ rm -rf %{buildroot}
 %doc package*.xml
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
+
+
+%changelog
+* Thu May 03 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-2mdv2012.0
++ Revision: 795501
+- rebuild for php-5.4.x
+
+* Thu Apr 19 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1
++ Revision: 791882
+- fix build
+- 1.0.0
+- remove broken source
+- 0.2.0
+
+* Mon Jan 16 2012 Oden Eriksson <oeriksson@mandriva.com> 0.1.5-0.1
++ Revision: 761713
+- quite tiresome shit here...
+- still borked...
+- grr!!!
+- 0.1.5 (git snap)
+- fix build
+- rebuild
+- rebuilt for php-5.3.8
+- rebuilt for php-5.3.7
+
+* Sat Mar 19 2011 Oden Eriksson <oeriksson@mandriva.com> 0.1.4-7
++ Revision: 646685
+- rebuilt for php-5.3.6
+
+* Sat Jan 08 2011 Oden Eriksson <oeriksson@mandriva.com> 0.1.4-6mdv2011.0
++ Revision: 629870
+- rebuilt for php-5.3.5
+
+* Mon Jan 03 2011 Oden Eriksson <oeriksson@mandriva.com> 0.1.4-5mdv2011.0
++ Revision: 628190
+- ensure it's built without automake1.7
+
+* Wed Nov 24 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.4-4mdv2011.0
++ Revision: 600530
+- rebuild
+
+* Sun Oct 24 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.4-3mdv2011.0
++ Revision: 588868
+- rebuild
+
+* Fri Mar 05 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.4-2mdv2010.1
++ Revision: 514655
+- rebuilt for php-5.3.2
+
+* Wed Feb 24 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.4-1mdv2010.1
++ Revision: 510635
+- 0.1.4
+
+* Sat Jan 02 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.3-3mdv2010.1
++ Revision: 485483
+- rebuilt for php-5.3.2RC1
+
+* Sat Nov 21 2009 Oden Eriksson <oeriksson@mandriva.com> 0.1.3-2mdv2010.1
++ Revision: 468254
+- rebuilt against php-5.3.1
+
+* Tue Oct 06 2009 Oden Eriksson <oeriksson@mandriva.com> 0.1.3-1mdv2010.0
++ Revision: 454663
+- 0.1.3
+
+* Sat Oct 03 2009 Oden Eriksson <oeriksson@mandriva.com> 0.1.2-1mdv2010.0
++ Revision: 452916
+- import php-spidermonkey
+
+
+* Sat Oct 03 2009 Oden Eriksson <oeriksson@mandriva.com> 0.1.2-1mdv2010.0
+- initial Mandriva package
