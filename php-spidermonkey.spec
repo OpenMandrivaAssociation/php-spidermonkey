@@ -9,7 +9,7 @@ Version:	1.0.0
 Release:	3
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/spidermonkey/
+URL:		https://pecl.php.net/package/spidermonkey/
 # https://github.com/christopherobin/php-spidermonkey
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 BuildRequires:	php-devel >= 3:5.3.0
