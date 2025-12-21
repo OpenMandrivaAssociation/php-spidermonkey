@@ -12,6 +12,11 @@ License:	PHP License
 URL:		https://pecl.php.net/package/spidermonkey/
 # https://github.com/christopherobin/php-spidermonkey
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	php-devel >= 3:5.3.0
 BuildRequires:	apache-devel >= 2.2.0
 # breaks backporting, but that's already broken...
